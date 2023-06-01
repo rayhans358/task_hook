@@ -15,6 +15,8 @@ const NewsSec = () => {
         .then((res) => {
           if (res.ok) {
             return res.json();
+          } else {
+            throw new Error('Network response was not ok');
           }
         })
         .then((data) => {
